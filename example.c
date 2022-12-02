@@ -14,7 +14,7 @@
 int main(int argc, char** argv)
 {
     // Create a matrix
-    TriangularMatrix* tm = createTriangularMatrix(4);
+    TriangularMatrix* tm = createTriangularMatrix(4, 0);
 
     // Set values
     setTriangularMatrix(tm, 1, 1, 1);

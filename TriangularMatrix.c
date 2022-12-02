@@ -14,13 +14,17 @@
 /**
  * @brief Create a Triangular Matrix object
  * @param n: size of matrix
+ * @param def: default value
  * @return TriangularMatrix
  */
-TriangularMatrix* createTriangularMatrix(int n)
+TriangularMatrix* createTriangularMatrix(int n, int def)
 {
     TriangularMatrix* tm = (TriangularMatrix*)malloc(sizeof(TriangularMatrix));
     tm->n = n;
     tm->A = (int*)malloc(n * (n + 1) / 2 * sizeof(int));
+    for (int i = 0; i < n * (n + 1) / 2; i++) {
+        tm->A[i] = def;
+    }
     return tm;
 }
 

@@ -13,9 +13,10 @@ typedef struct TriangularMatrix
 /**
  * @brief Create a Triangular Matrix object
  * @param n: size of matrix
+ * @param def: default value
  * @return TriangularMatrix
  */
-TriangularMatrix* createTriangularMatrix(int n);
+TriangularMatrix* createTriangularMatrix(int n, int def);
 
 /**
  * @brief Set value of matrix
