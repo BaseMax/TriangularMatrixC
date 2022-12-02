@@ -41,6 +41,15 @@ printf("Get value: %d\n", getTriangularMatrix(tm, 3, 2));
 destroyTriangularMatrix(tm);
 ```
 
+Output:
+```
+1 0 0 0
+2 3 0 0
+4 5 6 0
+7 8 9 10
+Get value: 5
+```
+
 And another example:
 
 ```c
@@ -68,6 +77,16 @@ printf("Get value: %d\n", getTriangularMatrix(tm2, 3, 2));
 
 // Destroy the matrix
 destroyTriangularMatrix(tm2);
+```
+
+Output:
+
+```bash
+10 0 0 0
+20 30 0 0
+40 50 60 0
+70 80 90 10
+Get value: 50
 ```
 
 That's it! You can now use the library to create a triangular matrix.
