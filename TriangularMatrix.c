@@ -1,4 +1,5 @@
 /**
+ * 
  * @file TriangularMatrix.c
  * @author Max Base (maxbasecode@gmail.com)
  * @brief Working with large triangular matrix (upper or lower) in C
