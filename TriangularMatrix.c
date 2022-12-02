@@ -10,3 +10,70 @@
 
 #include "TriangularMatrix.h"
 
+/**
+ * @brief Create a Triangular Matrix object
+ * @param n: size of matrix
+ * @return TriangularMatrix
+ */
+TriangularMatrix* createTriangularMatrix(int n)
+{
+    TriangularMatrix* tm = (TriangularMatrix*)malloc(sizeof(TriangularMatrix));
+    tm->n = n;
+    tm->A = (int*)malloc(n * (n + 1) / 2 * sizeof(int));
+    return tm;
+}
+
+/**
+ * @brief Set value of matrix
+ * @param tm: TriangularMatrix
+ * @param i: row
+ * @param j: column
+ * @param x: value
+ */
+void setTriangularMatrix(TriangularMatrix* tm, int i, int j, int x)
+{
+    if (i >= j)
+        tm->A[i * (i - 1) / 2 + j - 1] = x;
+}
+
+/**
+ * @brief Get value of matrix
+ * @param tm: TriangularMatrix
+ * @param i: row
+ * @param j: column
+ * @return int
+ */
+int getTriangularMatrix(TriangularMatrix* tm, int i, int j)
+{
+    if (i >= j)
+        return tm->A[i * (i - 1) / 2 + j - 1];
+    return 0;
+}
+
+/**
+ * @brief Display the matrix
+ * @param tm: TriangularMatrix
+ */
+void displayTriangularMatrix(TriangularMatrix* tm)
+{
+    int i, j;
+    for (i = 1; i <= tm->n; i++) {
+        for (j = 1; j <= tm->n; j++) {
+            if (i >= j)
+                printf("%d ", tm->A[i * (i - 1) / 2 + j - 1]);
+            else
+                printf("0 ");
+        }
+        printf("\n");
+    }
+}
+
+/**
+ * @brief Destroy the Triangular Matrix object
+ * @param tm: TriangularMatrix
+ */
+void destroyTriangularMatrix(TriangularMatrix* tm)
+{
+    free(tm->A);
+    free(tm);
+}
