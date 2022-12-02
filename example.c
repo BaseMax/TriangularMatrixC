@@ -37,5 +37,29 @@ int main(int argc, char** argv)
     // Destroy the matrix
     destroyTriangularMatrix(tm);
 
+    // Create a matrix
+    TriangularMatrix* tm2 = createTriangularMatrix(4, 0);
+
+    // Set values
+    setTriangularMatrixIndex(tm2, 0, 10);
+    setTriangularMatrixIndex(tm2, 1, 20);
+    setTriangularMatrixIndex(tm2, 2, 30);
+    setTriangularMatrixIndex(tm2, 3, 40);
+    setTriangularMatrixIndex(tm2, 4, 50);
+    setTriangularMatrixIndex(tm2, 5, 60);
+    setTriangularMatrixIndex(tm2, 6, 70);
+    setTriangularMatrixIndex(tm2, 7, 80);
+    setTriangularMatrixIndex(tm2, 8, 90);
+    setTriangularMatrixIndex(tm2, 9, 10);
+
+    // Display the matrix
+    displayTriangularMatrix(tm2);
+
+    // Get value
+    printf("Get value: %d\n", getTriangularMatrix(tm2, 3, 2));
+
+    // Destroy the matrix
+    destroyTriangularMatrix(tm2);
+
     return 0;
 }

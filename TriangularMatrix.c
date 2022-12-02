@@ -42,6 +42,17 @@ void setTriangularMatrix(TriangularMatrix* tm, int i, int j, int x)
 }
 
 /**
+ * @brief Put the value of matrix without worrying about the order of i and j
+ * @param tm: TriangularMatrix
+ * @param index: index
+ * @param x: value
+ */
+void setTriangularMatrixIndex(TriangularMatrix* tm, int index, int x)
+{
+    tm->A[index] = x;
+}
+
+/**
  * @brief Get value of matrix
  * @param tm: TriangularMatrix
  * @param i: row
