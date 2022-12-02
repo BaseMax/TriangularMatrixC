@@ -22,6 +22,7 @@ TriangularMatrix* createTriangularMatrix(int n, int def)
     TriangularMatrix* tm = (TriangularMatrix*)malloc(sizeof(TriangularMatrix));
     tm->n = n;
     tm->A = (int*)malloc(n * (n + 1) / 2 * sizeof(int));
+    tm->def = def;
     for (int i = 0; i < n * (n + 1) / 2; i++) {
         tm->A[i] = def;
     }
@@ -78,7 +79,7 @@ void displayTriangularMatrix(TriangularMatrix* tm)
             if (i >= j)
                 printf("%d ", tm->A[i * (i - 1) / 2 + j - 1]);
             else
-                printf("0 ");
+                printf("%d ", tm->def);
         }
         printf("\n");
     }

@@ -8,6 +8,7 @@ typedef struct TriangularMatrix
 {
     int n;
     int *A;
+    int def;
 } TriangularMatrix;
 
 /**
